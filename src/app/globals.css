@@ -24,3 +24,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* banner slider arrow custaimezation  start*/
+/* Swiper Navigation Arrows (Next / Prev) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;        /* Make arrow icons white */
+  width: 2.5rem;                  /* Increase arrow button size */
+  height: 2.5rem;
+}
+
+/* Make sure the ::after pseudo-element is also white */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white !important;        /* arrow icon color */
+  font-size: 2rem;                 /* arrow icon size */
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+
+
+/* banner slider arrow custaimezation  end*/
