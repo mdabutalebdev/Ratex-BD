@@ -15,14 +15,16 @@ const NewArrivals = () => {
 
   return (
     <div className="py-16">
-      <div className="container mx-auto px-24">
-        <Heading
+      <div className="container mx-auto px-20">
+       <div className="">
+         <Heading
           heading="New "
           span="Arrivals"
           subheading="Check out the latest additions to our collection!"
         />
+       </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div className="flex items-center flex-wrap gap-6 mt-8 ">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

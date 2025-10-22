@@ -59,7 +59,7 @@
     {
       "id": 1,
       "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/35_1.jpg",
-      "category": "Men's Shirt",
+      "category": "Shirts",
       "title": "Navy Printed Casual Shirt",
       "price": 45.0,
       "oldPrice": 56.0,
@@ -89,15 +89,16 @@
     },
     {
       "id": 4,
-      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/40_1.jpg",
-      "category": "Shoes",
-      "title": "Your Flex Running Shoes",
-      "price": 50.0,
-      "oldPrice": 65.0,
-      "rating": 4.0,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/35_1.jpg",
+      "category": "Shirts",
+      "title": "Navy Printed Casual Shirt",
+      "price": 45.0,
+      "oldPrice": 56.0,
+      "rating": 3.2,
       "onSale": true,
-       "isNew": true
+      "isNew": true
     },
+    
     {
       "id": 5,
       "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/42_2.jpg",
@@ -116,6 +117,47 @@
       "price": 60.0,
       "oldPrice": 75.0,
       "rating": 4.3,
+      "onSale": true
+    },
+    {
+      "id": 7,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/40_1.jpg",
+      "category": "Shoes",
+      "title": "Your Flex Running Shoes",
+      "price": 50.0,
+      "oldPrice": 65.0,
+      "rating": 4.0,
+      "onSale": true,
+       "isNew": true
+    },
+    {
+      "id": 8,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/39_1.jpg",
+      "category": "Watches",
+      "title": "Smart Watch Series 6",
+      "price": 120.0,
+      "oldPrice": 150.0,
+      "rating": 4.6,
+      "onSale": false
+    },
+    {
+      "id": 9,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/36_1.jpg",
+      "category": "Hats & Caps",
+      "title": "Classic Baseball Cap",
+      "price": 25.0,
+      "oldPrice": 30.0,
+      "rating": 4.1,
+      "onSale": true
+    },
+    {
+      "id": 10,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/41_1.jpg",
+      "category": "Glasses",
+      "title": "Aviator Sunglasses",
+      "price": 35.0,
+      "oldPrice": 45.0,
+      "rating": 4.4,
       "onSale": true
     }
   ]

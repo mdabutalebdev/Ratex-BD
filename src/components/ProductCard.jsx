@@ -45,9 +45,9 @@ const ProductCard = ({ product }) => {
         />
       </div>
 
-      <div className="pl-4 pb-4">
+      <div className="pl-4 pb-4 pt-2">
         <p className="text-gray-400 text-sm mb-1">{product.category}</p>
-        <h3 className="text-base font-semibold text-gray-800 mb-2">
+        <h3 className="text-base font-medium text-gray-600 mb-2">
           {product.title}
         </h3>
 
