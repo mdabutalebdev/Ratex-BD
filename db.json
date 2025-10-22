@@ -1,0 +1,122 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-3.png",
+      "name": "Dresses",
+      "itemCount": 120
+    },
+    {
+      "id": 2,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-1.png",
+      "name": "Shirts",
+      "itemCount": 80
+    },
+    {
+      "id": 3,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-2.png",
+      "name": "Watches",
+      "itemCount": 60
+    },
+    {
+      "id": 4,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-6.png",
+      "name": "Shorts",
+      "itemCount": 45
+    },
+    {
+      "id": 5,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-7.png",
+      "name": "Jackets",
+      "itemCount": 30
+    },
+    {
+      "id": 6,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-5.png",
+      "name": "Hat & Caps",
+      "itemCount": 55
+    },
+    {
+      "id": 7,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/category/c-4.png",
+      "name": "Glasses",
+      "itemCount": 40
+    },
+    {
+      "id": 8,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/38_1.jpg",
+      "name": "Sweaters",
+      "itemCount": 25
+    },
+    {
+      "id": 9,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/42_1.jpg",
+      "name": "Shoes",
+      "itemCount": 70
+    } 
+  ],
+  "products": [
+    {
+      "id": 1,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/35_1.jpg",
+      "category": "Men's Shirt",
+      "title": "Navy Printed Casual Shirt",
+      "price": 45.0,
+      "oldPrice": 56.0,
+      "rating": 3.2,
+      "onSale": true,
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/34_1.jpg",
+      "category": "Dresses",
+      "title": "Multicolor Striped Dress",
+      "price": 30.0,
+      "oldPrice": 38.0,
+      "rating": 3.8,
+      "onSale": true
+    },
+    {
+      "id": 3,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/38_1.jpg",
+      "category": "Jackets",
+      "title": "Zipper Winter Jacket",
+      "price": 68.0,
+      "oldPrice": 90.0,
+      "rating": 4.5,
+      "onSale": false
+    },
+    {
+      "id": 4,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/40_1.jpg",
+      "category": "Shoes",
+      "title": "Your Flex Running Shoes",
+      "price": 50.0,
+      "oldPrice": 65.0,
+      "rating": 4.0,
+      "onSale": true,
+       "isNew": true
+    },
+    {
+      "id": 5,
+      "image": "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img/product-images/42_2.jpg",
+      "category": "Shoes",
+      "title": "Leather Loafers",
+      "price": 80.0,
+      "oldPrice": 95.0,
+      "rating": 4.7,
+      "onSale": false
+    },
+    {
+      "id": 6,
+      "image": "https://titanwatches.com.bd/cdn/shop/files/77105SM09_1.png?v=1730804054&width=1000",
+      "category": "watches",
+      "title": "Analog Wrist Watch",
+      "price": 60.0,
+      "oldPrice": 75.0,
+      "rating": 4.3,
+      "onSale": true
+    }
+  ]
+}

@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "server_start": "json-server --watch db.json --port 8000",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "json-server": "^1.0.0-beta.3",
     "next": "15.5.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",

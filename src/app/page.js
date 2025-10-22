@@ -1,10 +1,18 @@
+import DayOfDeal from "@/components/DayOfDeal";
 import Hero from "@/components/Hero";
-import Image from "next/image";
+import MiddleBanner from "@/components/MiddleBanner";
+import NewArrivel from "@/components/NewArrivel";
+import OurCategory from "@/components/OurCategory";
+ 
 
 export default function Home() {
   return (
    <div>
      <Hero/>
+     <OurCategory/>
+    <DayOfDeal/>
+    <MiddleBanner/>
+    <NewArrivel/>
    </div>
   );
 }

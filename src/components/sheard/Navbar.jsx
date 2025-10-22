@@ -46,18 +46,18 @@ const Navbar = () => {
             </h3>
           </div>
           <div className="flex gap-5">
-            <Link href="/">Home</Link>
-            <Link href="/category">Category</Link>
-            <Link href="/product">Product</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/" className="font-medium text-gray-700 hover:text-[#5CAF90] duration-300">Home</Link>
+            <Link href="/category" className="font-medium text-gray-700 hover:text-[#5CAF90] duration-300">Category</Link>
+            <Link href="/product" className="font-medium text-gray-700 hover:text-[#5CAF90] duration-300">Product</Link>
+            <Link href="/blog" className="font-medium text-gray-700 hover:text-[#5CAF90] duration-300">Blog</Link>
+            <Link href="/contact" className="font-medium text-gray-700 hover:text-[#5CAF90] duration-300">Contact</Link>
           </div>
           <div className="flex items-center gap-8 ml-auto">
             <div className="flex items-center gap-1">
               <CiUser className="text-2xl" />
               <div className="">
                 <p className="text-[14px] leading-tight">Account</p>
-                <p className="text-base font-bold leading-tight">Login</p>
+                <p className="text-base font-bold text-gray-600 leading-tight">Login</p>
               </div>
             </div>
 
@@ -65,14 +65,14 @@ const Navbar = () => {
               <FaRegHeart className="text-2xl" />
               <div className="">
                 <p className="text-[14px] leading-tight">Wishlist</p>
-                <p className="text-base font-bold leading-tight">3-items</p>
+                <p className="text-base font-bold text-gray-600 leading-tight">3-items</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
               <HiOutlineShoppingBag className="text-2xl" />
               <div className="">
                 <p className="text-[14px] leading-tight">Card</p>
-                <p className="text-base font-bold leading-tight">3-items</p>
+               <p className="text-base font-bold text-gray-600 leading-tight">3-items</p>
               </div>
             </div>
           </div>
