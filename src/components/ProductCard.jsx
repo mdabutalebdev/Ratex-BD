@@ -1,109 +1,75 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { FaStar, FaStarHalfAlt, FaRegStar, FaEye } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
 import { GoGitCompare } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 
-const ProductCard = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error("Error fetching products:", err));
-  }, []);
+const ProductCard = ({ product }) => {
+  const fullStars = Math.floor(product.rating);
+  const hasHalfStar = product.rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className=" ">
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        pagination={{ clickable: true }}
-     
-        spaceBetween={30}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
-        }}
-        className="mySwiper"
-      >
-        {products.map((product) => {
-          const fullStars = Math.floor(product.rating);
-          const hasHalfStar = product.rating % 1 >= 0.5;
-          const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    <div className="group bg-white w-[250px] h-[350px] border border-gray-300 relative mx-auto">
+      <div className="relative bg-gray-50 flex items-center justify-center">
+        {(product.onSale || product.isNew) && (
+          <span
+            className={`absolute top-3 left-3 ${
+              product.isNew ? "bg-green-500" : "bg-red-500"
+            } text-white text-xs font-semibold px-2 py-1 rounded`}
+          >
+            {product.isNew ? "NEW" : "SALE"}
+          </span>
+        )}
 
-          return (
-            <SwiperSlide key={product.id}>
-              <div className="group bg-white w-[250px] h-[350px] border border-gray-300    mx-auto relative">
-                <div className="relative bg-gray-50 flex items-center justify-center">
-                  {(product.onSale || product.isNew) && (
-                    <span
-                      className={`absolute top-3 left-3 ${
-                        product.isNew ? "bg-green-500" : "bg-red-500"
-                      } text-white text-xs font-semibold px-2 py-1 rounded`}
-                    >
-                      {product.isNew ? "NEW" : "SALE"}
-                    </span>
-                  )}
+        {/* Hover icons */}
+        <div className="absolute top-4 right-[-40px] group-hover:right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <button className="bg-white p-2 shadow hover:bg-gray-100 transition">
+            <CiHeart className="text-gray-700" size={14} />
+          </button>
+          <button className="bg-white p-2 shadow hover:bg-gray-100 transition">
+            <FaEye className="text-gray-700" size={14} />
+          </button>
+          <button className="bg-white p-2 shadow hover:bg-gray-100 transition">
+            <GoGitCompare className="text-gray-700" size={14} />
+          </button>
+        </div>
 
-                  {/* Hover icons */}
-                  <div className="absolute top-4 right-[-40px] group-hover:right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <button className="bg-white p-2   shadow hover:bg-gray-100 transition">
-                      <CiHeart className="text-gray-700" size={14} />
-                    </button>
-                    <button className="bg-white p-2  shadow hover:bg-gray-100 transition">
-                      <FaEye className="text-gray-700" size={14} />
-                    </button>
-                    <button className="bg-white p-2   shadow hover:bg-gray-100 transition">
-                      <GoGitCompare className="text-gray-700" size={14} />
-                    </button>
-                  </div>
+        <Image
+          src={product.image}
+          alt={product.title}
+          width={250}
+          height={100}
+          className="  p-4"
+        />
+      </div>
 
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    width={250}
-                    height={220}
-                    className="object-contain p-4"
-                  />
-                </div>
+      <div className="pl-4 pb-4">
+        <p className="text-gray-400 text-sm mb-1">{product.category}</p>
+        <h3 className="text-base font-semibold text-gray-800 mb-2">
+          {product.title}
+        </h3>
 
-                <div className="pl-4 pb-4">
-                  <p className="text-gray-400 text-sm mb-1">{product.category}</p>
-                  <h3 className="text-base font-semibold text-gray-800 mb-2">
-                    {product.title}
-                  </h3>
+        <div className="flex mb-2">
+          {[...Array(fullStars)].map((_, i) => (
+            <FaStar key={`full-${i}`} className="text-yellow-400" />
+          ))}
+          {hasHalfStar && <FaStarHalfAlt className="text-yellow-400" />}
+          {[...Array(emptyStars)].map((_, i) => (
+            <FaRegStar key={`empty-${i}`} className="text-gray-300" />
+          ))}
+        </div>
 
-                  <div className="flex mb-2">
-                    {[...Array(fullStars)].map((_, i) => (
-                      <FaStar key={`full-${i}`} className="text-yellow-400" />
-                    ))}
-                    {hasHalfStar && <FaStarHalfAlt className="text-yellow-400" />}
-                    {[...Array(emptyStars)].map((_, i) => (
-                      <FaRegStar key={`empty-${i}`} className="text-gray-300" />
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <p className="text-lg font-bold text-gray-800">
-                      ${product.price.toFixed(2)}
-                    </p>
-                    <p className="text-gray-400 line-through text-sm">
-                      ${product.oldPrice.toFixed(2)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-bold text-gray-800">
+            ${product.price.toFixed(2)}
+          </p>
+          <p className="text-gray-400 line-through text-sm">
+            ${product.oldPrice.toFixed(2)}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

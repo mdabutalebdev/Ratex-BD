@@ -1,4 +1,5 @@
 import DayOfDeal from "@/components/DayOfDeal";
+import DiscountEvent from "@/components/DiscountEvent";
 import Hero from "@/components/Hero";
 import MiddleBanner from "@/components/MiddleBanner";
 import NewArrivel from "@/components/NewArrivel";
@@ -13,6 +14,7 @@ export default function Home() {
     <DayOfDeal/>
     <MiddleBanner/>
     <NewArrivel/>
+    <DiscountEvent/>
    </div>
   );
 }
