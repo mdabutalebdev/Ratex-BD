@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
         {(product.onSale || product.isNew) && (
           <span
             className={`absolute top-3 left-3 ${
-              product.isNew ? "bg-green-500" : "bg-red-500"
+              product.isNew ? "bg-[#5caf90]" : "bg-red-500"
             } text-white text-xs font-semibold px-2 py-1 rounded`}
           >
             {product.isNew ? "NEW" : "SALE"}

@@ -23,7 +23,7 @@ const DiscountCard = ({ image, discount, title, buttonText }) => {
       {/* Text & Button */}
       <div className="absolute bottom-5 left-5 text-white">
         <h2 className="text-lg font-bold mb-2">{title}</h2>
-        <button className="bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition">
+        <button className="bg-[#5caf90] px-4 py-2 rounded hover:bg-green-600 transition">
           {buttonText}
         </button>
       </div>
