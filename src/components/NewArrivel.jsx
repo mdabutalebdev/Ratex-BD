@@ -1,33 +1,42 @@
-"use client";
-import React, { useEffect, useState } from "react";
+ 
+import Button from "./Button";
+import CategoryWiseFiltearing from "./CategoryWiseFiltearing";
 import Heading from "./Heading";
 import ProductCard from "./ProductCard";
+ 
 
-const NewArrivals = () => {
-  const [products, setProducts] = useState([]);
+const NewArrivals = async () => {
+  const response = await fetch("http://localhost:8000/products");
+  const productAllData = await response.json();
 
-  useEffect(() => {
-    fetch("http://localhost:8000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error(err));
-  }, []);
+  const cateRes = await fetch("http://localhost:8000/categories");
+  const categoryesData = await cateRes.json();
 
   return (
     <div className="py-16">
       <div className="container mx-auto px-20">
-       <div className="">
-         <Heading
-          heading="New "
-          span="Arrivals"
-          subheading="Check out the latest additions to our collection!"
-        />
-       </div>
+        {/* Heading + Category row */}
 
-        <div className="flex items-center flex-wrap gap-6 mt-8 ">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className="flex">
+          <div className=" ">
+         <Heading heading="New" span="Arrivals" subheading="Check out the latest products added to our collection." />
+          </div>
+
+          <div className=" ">
+            <CategoryWiseFiltearing
+              categoryesData={categoryesData}
+              products={productAllData}
+           
+            />
+          </div>
+        </div>
+      
+
+        {/* View All button */}
+        <div className="flex justify-center mt-10">
+          <Button className="cursor-pointer rounded-md">
+            View All Products
+          </Button>
         </div>
       </div>
     </div>
